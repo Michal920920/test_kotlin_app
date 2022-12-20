@@ -15,6 +15,7 @@ import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.analytics.Analytics
 import com.microsoft.appcenter.crashes.Crashes
 import com.microsoft.appcenter.distribute.Distribute
+import com.microsoft.appcenter.distribute.UpdateTrack
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         super.onCreate(savedInstanceState)
+        Distribute.setUpdateTrack(UpdateTrack.PRIVATE);
         AppCenter.start(
             application, "00bc45a2-8785-45d2-861c-f0e5fa395773",
             Analytics::class.java, Crashes::class.java, Distribute::class.java
