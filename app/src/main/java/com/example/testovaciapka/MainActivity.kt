@@ -14,6 +14,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.analytics.Analytics
 import com.microsoft.appcenter.crashes.Crashes
+import com.microsoft.appcenter.distribute.Distribute
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         AppCenter.start(
             application, "00bc45a2-8785-45d2-861c-f0e5fa395773",
-            Analytics::class.java, Crashes::class.java
+            Analytics::class.java, Crashes::class.java, Distribute::class.java
         )
 
         binding = ActivityMainBinding.inflate(layoutInflater)
