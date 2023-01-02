@@ -22,7 +22,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
+            <meta-data android:name="io.sentry.dsn" android:value="https://59e9aab240d540b28e28f2f03ba49e3c@o420559.ingest.sentry.io/4504433797890048" />
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

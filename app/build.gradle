@@ -1,8 +1,13 @@
-plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
+buildscript {
+    repositories {
+        mavenCentral()
+    }
 }
-
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("io.sentry.android.gradle") version "3.3.0"
+}
 android {
     namespace 'com.example.testovaciapka'
     compileSdk 32
@@ -12,7 +17,7 @@ android {
         minSdk 29
         targetSdk 32
         versionCode 8
-        versionName "1.13"
+        versionName "1.14"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

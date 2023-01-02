@@ -16,6 +16,7 @@ import com.microsoft.appcenter.analytics.Analytics
 import com.microsoft.appcenter.crashes.Crashes
 import com.microsoft.appcenter.distribute.Distribute
 import com.microsoft.appcenter.distribute.UpdateTrack
+import io.sentry.Sentry
 
 class MainActivity : AppCompatActivity() {
 
@@ -45,6 +46,12 @@ class MainActivity : AppCompatActivity() {
                 .setAnchorView(R.id.fab)
                 .setAction("Action", null).show()
         }
+        try {
+            throw Exception("This is a test.")
+        } catch (e: Exception) {
+            Sentry.captureException(e)
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
