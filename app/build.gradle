@@ -1,12 +1,6 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-}
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("io.sentry.android.gradle") version "3.3.0"
 }
 android {
     namespace 'com.example.testovaciapka'
