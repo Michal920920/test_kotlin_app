@@ -10,8 +10,8 @@ android {
         applicationId "com.example.testovaciapka"
         minSdk 29
         targetSdk 32
-        versionCode 8
-        versionName "1.14"
+        versionCode 9
+        versionName "1.15"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

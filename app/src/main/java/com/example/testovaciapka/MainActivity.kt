@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         super.onCreate(savedInstanceState)
-        Distribute.setUpdateTrack(UpdateTrack.PRIVATE);
+        Distribute.setUpdateTrack(UpdateTrack.PUBLIC);
         AppCenter.start(
             application, "00bc45a2-8785-45d2-861c-f0e5fa395773",
             Analytics::class.java, Crashes::class.java, Distribute::class.java
